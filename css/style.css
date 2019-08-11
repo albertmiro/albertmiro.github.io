@@ -1,0 +1,301 @@
+body {
+	width: 100%;
+	background: #FAFAFA	;
+	margin-bottom: 5em;
+}
+
+/*
+.navbar .logo {
+	color: white;	
+	font-weight: bold;
+	text-shadow: -1px 0px 1px #333;
+}
+
+.navbar .logo:hover {
+	color: #DDD;	
+	font-weight: bold;
+	text-shadow: -1px 0px 1px #333;
+}
+
+.navbar {
+	border-bottom: 0px;
+}
+*/
+
+#header {
+	text-align: center;
+	margin-bottom: 5em;
+}
+
+#header.img-bg {
+	background-image: url("../img/img_mount.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#header img {
+	width: 300px;
+	box-shadow: 1px 1px 2px #333;
+	margin-top: 50px;
+}
+
+.wrapper h3 {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#name {
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 0.8em;
+	line-height: 1em;
+}
+
+#menu {
+	text-align: center;
+}
+
+#menu ul > * {
+	font-size: 1.2em;
+	display: inline-block;
+	cursor:pointer; cursor: hand;
+	margin-right: 1em;
+}
+
+#menu ul > *:hover {
+	text-decoration: underline;
+}
+
+#menu-fixed {
+	display: none;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 2.5em;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.8);
+	text-align: center;
+	z-index: 1;
+}
+
+#menu-fixed ul > * {
+	font-size: 1.2em;
+	display: inline-block;
+	cursor:pointer; cursor: hand;
+	margin-right: 1em;
+}
+
+#menu-fixed ul > *:hover {
+	text-decoration: underline;
+}
+
+#content {
+
+}
+
+
+#content .wrapper {
+	width: 70%;
+	margin: 3em auto;
+}
+
+@media(max-width: 768px) {
+	#content .wrapper {
+		width: 90%;
+		margin: 3em auto;
+	}
+}
+
+
+#about-me {
+
+}
+
+#about-me h2 {
+	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#professional-bg {
+
+}
+
+#professional-bg .img-bg {
+	/*background-image: url("../img/img_muntanya.jpg");*/
+}
+
+#projects {
+
+}
+
+#projects .img-bg {
+
+}
+
+#knowledge {
+
+}
+
+#knowledge .img-bg {
+/*	background-image: url("../img/img_muntanya.jpg"); */
+}
+
+#knowledge .card .img-card img {
+	width: 8em;
+}
+
+.img-bg {
+	background-size: 100%;
+	background-position: center;
+	height: 400px;
+}
+
+div .card {
+	margin: 1em;
+	vertical-align: top;
+	min-height: 25em;
+}
+
+div .card:hover {
+	background-color: #F5f5f5;
+}
+
+.card {
+	background-color: #FAFAFA;
+	padding: 1%;
+	box-shadow: 1px 1px 4px #ccc;
+}
+
+.card .img-card {
+	text-align: center;
+	margin: 1em;
+}
+
+.card .img-card img {
+	max-height: 25em;
+}
+
+.card .title-card {
+	margin: 0.4em 0;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.8em;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.card .card-content {
+	margin: 0.5em;
+}
+
+.card .item-description {
+	
+}
+
+.card .item-projects {
+
+}
+
+.card .item-projects ul {
+	margin-bottom: 0em;
+	margin-left: 1.5em;
+}
+
+.card .item-dates ul {
+	margin: 0;
+	padding: 0;
+}
+
+.card .item-dates li {
+	display: inline;
+}
+
+.card .item-dates li::after {
+	content: " - ";
+}
+
+.card .item-dates li:last-child::after {
+	content: "";
+}
+
+#scrollTop {
+	position: fixed;
+	bottom: 6em;
+	right: 2em;
+	width: 3em;
+	height: 3em;
+	border-radius: 1.5em;
+	cursor:pointer; cursor: hand;
+	display: none;
+	background-color: rgba(0,0,0,0.8);
+}
+
+#scrollTop:hover {
+	position: fixed;
+	bottom: 6em;
+	right: 2em;
+	width: 3em;
+	height: 3em;
+	border-radius: 1.5em;
+	cursor:pointer; cursor: hand;
+	display: none;
+	background-color: rgba(100,100,100,0.8);
+}
+
+#scrollTop .icon-arrow-up {
+	display: block;
+	color: white;
+	font-size: 2.2em;
+	line-height: 1.25em;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.95);
+}
+
+.footer .row {
+	margin: 0 2em;
+	font-size: 1.25em;
+}
+
+.footer .col-4 {
+	font-style: italic;
+}
+
+.footer .social-media {
+	text-align: right;
+}
+
+.footer [class*="icon-"] {
+	font-size: 2em;
+	margin-right: 0.5em;
+	padding: 0;
+	color: black;
+}
+
+.footer [class*="icon-"]:hover {
+	font-size: 2em;
+	margin-right: 0.5em;
+	padding: 0;
+	color: #429CE8;
+}
+
+@media(max-width: 768px) {
+	.footer .row {
+		margin: 0.2em;
+		font-size: 1.25em;
+		text-align: center;
+	}
+
+	.footer .social-media {
+		text-align: center;
+		margin-top: 0.4em;
+	}
+}

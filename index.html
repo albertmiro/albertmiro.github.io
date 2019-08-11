@@ -1,1 +1,766 @@
-Test Github page
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Albert Miró Amigó</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/booterfly.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript">
+			
+			var canShowFixedMenu = true;
+
+			$(document).ready(function() {
+				
+				$( "#scrollTop" ).click(function( event ) {
+					var body = $("html, body");
+					body.animate({scrollTop:0}, '800', 'swing');
+				});
+
+				$( ".menu-about-me" ).click(function( event ) {
+					$("html, body").animate({scrollTop:$('#about-me').position().top - 45}, '800', 'swing');
+				});
+
+				$( ".menu-exp" ).click(function( event ) {
+					$("html, body").animate({scrollTop:$('#professional-bg').position().top - 45},'800','swing');
+				});
+
+				$( ".menu-projects" ).click(function( event ) {
+					$("html, body").animate({scrollTop:$('#projects').position().top - 45}, '800', 'swing');
+				});
+
+				$( ".menu-estudis" ).click(function( event ) {
+					$("html, body").animate({scrollTop:$('#knowledge').position().top - 45}, '800', 'swing');
+				});
+
+			});
+			
+			$(window).scroll(function() {
+				var windowScroll = $(window).scrollTop();
+				if(windowScroll >= 300) {
+					$("#scrollTop").fadeIn( "slow" );
+				} else {
+					$("#scrollTop").fadeOut( "slow" );
+				}
+
+				if(canShowFixedMenu) {
+					if(windowScroll > $( "#menu" ).position().top) {
+						$('#menu-fixed').show();
+					} else {
+						$('#menu-fixed').hide();
+					}	
+				} else {
+					if($('#menu-fixed').is(':visible')) {
+						$('#menu-fixed').hide();
+					}
+				}
+				
+
+			});
+
+			$(window).resize(function() { 
+				var windowSize = $(window).width();
+				if (windowSize < 768) {
+					canShowFixedMenu = false;
+					$('#menu-fixed').hide();
+				} else {
+					canShowFixedMenu = true;
+					if($(window).scrollTop() > $( "#menu" ).position().top) {
+						$('#menu-fixed').show();
+					}	
+				}
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div id="header" class="img-bg">
+			<img class="circle" src="./img/header_img.jpg">
+		</div>
+
+		<div id="name">
+			Albert Miró Amigó
+		</div>
+		<div id="menu">
+			<ul>
+				<li><span class="menu-about-me">About Me</span></li>
+				<li><span class="menu-exp">Professional Experience</span></li>
+				<li><span class="menu-projects">Projects & Labs</span></li>
+				<li><span class="menu-estudis">Studies</span></li>
+			</ul>
+		</div>
+
+		<div id="menu-fixed">
+			<ul>
+				<li><span class="menu-about-me">About Me</span></li>
+				<li><span class="menu-exp">Professional Experience</span></li>
+				<li><span class="menu-projects">Projects & Labs</span></li>
+				<li><span class="menu-estudis">Studies</span></li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<div id="about-me">
+				<div class="wrapper">
+					<h2>Hi there! Welcome!</h2>
+					<p>
+						Thanks for your visit, let me introduce myself, my name is Albert Miró, and this is my personal website. In this website you can find information about who am I, which are my motivations and interests. Also, you can take a look at my professional background, as well as some projects that I've done for myself and some that I've made at work.
+					</p>
+					 <p>
+					 	I'm a mobile applications developer, using cutting edge and growing technologies like augmented reality, specialized in Android and Unity3D.
+					 </p>
+
+					<p>
+						Some of my hobbies are skiing, mountaineering, cycling, reading, cooking and taking pictures (you can take a look at some of my pictures at this <a href="http://www.500px.com/albertmiro">link</a>). I like to enjoy my free time, either making some of theses activities or working in my personal projects.
+					</p>
+					<p>
+						I'm interested in learning all the new technologies that appear and use them in my projects. Motivated by game development, web development, team working, entrepreneurship and take the most of all the opportunities to learn and improve personally and professionally.
+					</p>
+					<p>
+						Now that you know who I am, if you want to know me better or propose some interesting project, don't hesitate to contact me!
+					</p>
+
+					<p>To finalize, I would like to share with you the next quote:</p>
+
+					<blockquote>
+						It may be hard for an egg to turn into a bird: it would be a jolly sight harder for it to learn to fly while remaining an egg. We are like eggs at present. And you cannot go on indefinitely being just an ordinary, decent egg. We must be hatched or go bad.
+						<br/>
+						C.S. Lewis.
+					</blockquote>
+					
+				</div>
+			</div>
+
+			<div id="professional-bg">
+				<div class="wrapper">
+					<h3>Professional Experience</h3>
+					<p></p>
+					<div class="row">
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									Pangea Reality
+								</div>
+								<div class="img-card">
+									<img src="./img/logo_pangea.png" alt=""></img>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+										<b>Web:</b><br/>
+										<a href="http://www.pangeareality.com" target="_blank">http://www.pangeareality.com</a>
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										Mobile applications and games development with augmented reality and Unity3D
+										<br/>
+										
+									</div>
+									<div class="item-projects">
+										<b>Projects:</b><br/>
+											Some of the projects in which I have been involved are:
+											<ul>
+												<li><a href="https://play.google.com/store/apps/details?id=com.codiwans.cinesa" target="_blank">Cinesa</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.grundig" target="_blank">Grundig</a></li>
+												<li><a href="http://www.pangeareality.com/en/portfolio/mascotas-lanjaron-augmented-reality-christmas/" target="_blank">Lanjarón</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=es.pangea.cheetos" target="_blank">Cheetos Moovins</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.holoz" target="_blank">Holoz Virtual Tattoos</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.isdi" target="_blank">MIBers</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.fanta" target="_blank">Fanta - Te Damos La Paga</a></li>
+												<li><a href="http://www.pangeareality.com/ca/portfolio/tour-interactivo-rcd-espanyol-de-barcelona/" target="_blank">Tour Interactivo – RCD Espanyol</a></li>
+												<li><a href="http://www.pangeareality.com/ca/portfolio/maqueta-en-realidad-aumentada-applus-idiada/" target="_blank">Applus+ Idiada</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.moscowzoo" target="_blank">Moscow Zoo App</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=es.bp.bipi" target="_blank">BiPi</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.ar.icaganer" target="_blank">iCaganer</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.educa.AnimaFashion" target="_blank">Educa - CreAnima Fashion</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.educa.AnimaMonsters" target="_blank">Educa - CreAnima Monsters</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.educa.lince" target="_blank">Educa - Lince</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.educa.appuzzle_es" target="_blank">Educa - Appuzzle Spain</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.educa.appuzzle_fr" target="_blank">Educa - Appuzzle France</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.educa.appuzzle_eu" target="_blank">Educa - Appuzzle Europe</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.educa.appuzzle_world" target="_blank">Educa - Appuzzle World</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=cat.gencat.mobi.carnetjove" target="_blank">Carnet Jove</a></li>
+												<li><a href="http://www.pangeareality.com/ca/portfolio/grupo-planeta-relojes/" target="_blank">Grup Planeta - Rellotges</a></li>
+												<li><a href="http://www.pangeareality.com/ca/portfolio/grupo-planeta-chef/" target="_blank">Grup Planeta - Chef Plus Induction</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.ar.sonynex_5r" target="_blank">Sony NEX Photo Places</a></li>
+												<li><a href="https://itunes.apple.com/es/app/beko/id573481647" target="_blank">BEKO</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.granjaNestle" target="_blank">La Granja Nesté</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.fanesfan.ar.Indeluz" target="_blank">Indeluz</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.ar.Estiluz" target="_blank">Estiluz</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.pangea.ar.PangeaDemo_iCandela" target="_blank">iCandela</a></li>
+												<li><a href="https://play.google.com/store/apps/details?id=com.fanesfan.ar.PangeaDemo" target="_blank">Pangea Reality</a></li>
+											</ul>
+									</div>
+									<div class="item-dates">
+										<b>Dates:</b><br/>
+										<ul>
+											<li>June 2012</li>
+											<li>Current work</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-6">
+							<div class="card">
+								<div class="title-card">
+									inLabFIB - LCFIB
+								</div>
+								<div class="img-card">
+									<img src="./img/logo_inlabfib.png" alt=""/>
+								</div>
+								<div class="card-content">
+									<div class="item-web">
+										<b>Web:</b><br/>
+										<a href="http://inlab.fib.upc.edu/" target="_blank">http://inlab.fib.upc.edu/</a>
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										PL/SQL developer with Oracle Forms
+										<br/>
+										Install and configuration of Oracle Weblogic 11g Server
+									</div>
+									<div class="item-projects">
+										<b>Projects:</b><br/>
+										<ul>
+											<li>
+												<a href="http://inlab.fib.upc.edu/en/totq-project" target="_blank">TOTQ</a>: Internal quality assurance System for the UPC
+											</li>
+										</ul>
+									</div>
+									<div class="item-dates">
+										<b>Dates:</b><br/>
+										<ul>
+											<li>Jaunary 2011</li>
+											<li>July 2011</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div id="projects">
+				<div class="wrapper">
+					<h3>Projects & Labs</h3>
+					<p>
+						At this section you can find all the projects that I've done for my personal development. Some of them are done in the university and some in my free time. The main purpose of all of them is to learn and improve my skills while I've been having a good time developing them.</p>
+					<div class="row">
+						<div class="col-12">							
+							<div class="card">
+								<div class="title-card">
+									Xtreme 3D Racing
+								</div>
+								<div class="img-card">
+									<img src="img/img_xtreme3dracing.jpg" alt=""/>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+										<b>Web:</b><br/>
+										<a href="http://renoir.upc.edu/brgf/uwin/catala/jocs/fitxa.php?Id=99" target="_blank">http://renoir.upc.edu/brgf/uwin/catala/jocs/fitxa.php?Id=99</a>
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Awesome racing game where the player becomes the pilot of a spacecraft and will try to overcome his enemies thorugh some attacks like placing walls in the middle of the trail, launching fireballs, or leaving objects in the middle of the trail to make their enemies crash and arrive to the finish line before them.
+										</p>
+										
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									MVLearning
+								</div>
+								<div class="img-card">
+									<img src="" alt=""/>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+										
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Online multimedia learning system using Moodle for the course Computer Networks Project.
+										</p>
+										Made with a group of four students.
+										
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									Installed Apps
+								</div>
+								<div class="img-card">
+									<img src="" alt=""/>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Application that lists all the applications that the user has installed in their device and lets you save the list in your device or send it through email.
+										</p>
+										
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-12">							
+							<div class="card">
+								<div class="title-card">
+									Final Degree Project
+								</div>
+								<div class="img-card">
+									<img src="./img/pfc_arcityguide.jpg" alt=""/>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+										<b>Web:</b><br/>
+										<a href="http://hdl.handle.net/2099.1/16513" target="_blank">http://hdl.handle.net/2099.1/16513</a>
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Development of an augmented reality application for the tourism in Barcelona for Android devices. With this application, the user can see information of some points of interest in the city, know where he are through a map and go for some routes guided using augmented reality.
+										</p>
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+
+					<div class="row">
+						<div class="col-12">							
+							<div class="card">
+								<div class="title-card">
+									Find Find!
+								</div>
+								<div class="img-card">
+									<img src="img/findfind.jpg" alt=""/>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Have a great time searching all the pairs! Classic game to find the pairs with an animals theme.
+										</p>
+										
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12">							
+							<div class="card">
+								<div class="title-card">
+									Fhenerur
+								</div>
+								<div class="img-card">
+									<img src="./img/fhenerur.jpg" alt=""/>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+										<b>Web:</b><br/>
+										<a href="http://contest.rpgmakerweb.com/game/view/id/356" target="_blank">http://contest.rpgmakerweb.com/game/view/id/356</a>
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Fhenerur is a classic RPG game set in a feudal environment, where in some special and unique places magic still remains where humans haven't burned or destroyed the magical trees able to generate it.
+										</p>
+										<p>
+										This story is about Jack, a young wood sculptor who lives happily with his wife Arlene. Until a day arrives and they're forced to be separated.
+										</p>
+										<p>
+										Help Jack to discover a few places where magic still remains in order to find what he seeks the most.
+										In this journey you will find lots of proves and puzzles that you should complete in order to end the game.
+										</p>
+                                                                                
+                                                                                Developed with Christian Amenós.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					
+
+					<div class="row">
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									Count!
+								</div>
+								<div class="img-card">
+									<img src="img/ss_count.png" alt=""></img>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Application that lets you add or substract a counter, you can use it to count all the people that comes to an event, or any other activity that you think that it can be useful. Option to share your counts.
+										</p>
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									Quotes & Push
+								</div>
+								<div class="img-card">
+									<img src="img/ss_motiv.jpg" alt=""></img>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Application that shows a motivation quote every time that is opened. The user can see more quotes touching at them. This app has Push Notifications enabled to send messages to all the users simultaneously.
+										</p>
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									Open Street Maps
+								</div>
+								<div class="img-card">
+									<img src="img/ss_osm.jpg" alt=""></img>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Application that uses Open Street Maps to show your localization in a map.
+										</p>
+										
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									Time scheduler
+								</div>
+								<div class="img-card">
+									<img src="" alt=""></img>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+									</div>
+									<div class="item-description">
+										<b>Description:</b><br/>
+										<p>
+										Application that lets you compute the time between different dates and times.
+										</p>
+										
+									</div>
+									<div class="item-dates">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-12">							
+								<div class="card">
+									<div class="title-card">
+										Neuronum
+									</div>
+									<div class="img-card">
+                                                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/XnTsPw__YqE" frameborder="0" allowfullscreen></iframe>
+									</div>
+
+									<div class="card-content">
+										<div class="item-web">
+											<b>Web:</b><br/>
+											<a href="http://neuronum.enjoydreamers.com" target="_blank">http://neuronum.enjoydreamers.com</a>
+										</div>
+										<div class="item-description">
+											<b>Description:</b><br/>
+											<p>
+												Neuronum is the application that will help you to develop your Mental Fitness.
+												<br/>
+												Make simple numerical calculations every day in order to improve your memory and mental arithmetic skills.
+                                                                                                <br/><br/>
+                                                                                                Developed with Christian Amenós.
+											</p>
+											
+										</div>
+										<div class="item-dates">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+                                                <div class="row">
+                                                            <div class="col-12">							
+                                                                    <div class="card">
+                                                                            <div class="title-card">
+                                                                                    Wearable - Samsung Gear Apps
+                                                                            </div>
+                                                                            <div class="img-card">
+                                                                                    <img src="img/apps_gear.png" alt=""></img>
+                                                                            </div>
+
+                                                                            <div class="card-content">
+                                                                                   <div class="item-description">
+                                                                                            <b>Description:</b><br/>
+                                                                                            <p>
+                                                                                                    Applications development for the Samsung Galaxy Gear watch using the Tizen SDK, you can find them in the Samsung Store for Galaxy Gear.
+                                                                                                    <br/><br/>
+                                                                                                    Developed with Christian Amenós.
+                                                                                            </p>
+                                                                                            
+
+                                                                                    </div>
+                                                                                    <div class="item-dates">
+                                                                                    </div>
+                                                                            </div>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+						
+					</div>
+
+				</div>
+			</div>
+
+			<div id="knowledge">
+				<div class="wrapper">
+					<h3>Studies</h3>
+
+					<div class="row">
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									Universitat Politècnica de Catalunya</br>
+									School of Informatics (UPC - FIB)
+								</div>
+								<div class="img-card">
+									<img src="img/logo_upc.png" alt=""></img>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+										<b>Web:</b><br/>
+										<a href="http://www.fib.upc.edu" target="_blank">http://www.fib.upc.edu</a>
+									</div>
+									<div class="item-description">
+										<b>Studies:</b><br/>
+										Computer Science. <br/>
+										Universitat Politècnica de Catalunya.
+										<br/>
+									</div>
+									<div class="item-dates">
+										<b>Dates:</b><br/>
+										<ul>
+											<li>2005</li>
+											<li>2012</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-6">
+							<div class="card">
+								<div class="title-card">
+									University of Edinburgh <br/> School of Informatics
+								</div>
+								<div class="img-card">
+									<img src="" alt=""/>
+								</div>
+								<div class="card-content">
+									<div class="item-web">
+										<b>Web:</b><br/>
+										<a href="http://www.ed.ac.uk" target="_blank">http://www.ed.ac.uk</a>
+									</div>
+									<div class="item-description">
+										<b>Studies:</b><br/>
+										School of Informatics - Computer Science:
+										<br/>
+										<ul>
+											<li>Human Computer Interaction</li>
+											<li>Processing Formal and Natural Languages</li>
+											<li>Distributed Systems</li>
+											<li>Introduction to Vision and Robotics</li>
+										</ul>
+									</div>
+									<div class="item-dates">
+										<b>Dates:</b><br/>
+										<ul>
+											<li>September 2011</li>
+											<li>Desember 2011</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+
+					<div class="row">
+						<div class="col-6">							
+							<div class="card">
+								<div class="title-card">
+									Merit School - UPC
+								</div>
+								<div class="img-card">
+									<img src="img/logo_merit.png" alt=""></img>
+								</div>
+
+								<div class="card-content">
+									<div class="item-web">
+										<b>Web:</b><br/>
+										<a href="http://www.meritschool.com" target="_blank">http://www.meritschool.com</a>
+									</div>
+									<div class="item-description">
+										<b>Studies:</b><br/>
+										Level CAE C1.2 English Course
+										<br/>
+									</div>
+									<div class="item-dates">
+										<b>Dates:</b><br/>
+										<ul>
+											<li>2013</li>
+											<li>2014</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="title-card">
+                                    DevExperto - Antonio Leiva
+                                </div>
+                                <div class="img-card">
+                                    <img src="img/logo_dev.png" alt=""/>
+                                </div>
+
+                                <div class="card-content">
+                                    <div class="item-web">
+                                        <b>Web:</b><br/>
+                                        <a href="https://devexperto.com/kotlin-desarrolladores-android-presencial/" target="_blank">https://devexperto.com</a>
+                                    </div>
+                                    <div class="item-description">
+                                        <b>Studies:</b><br/>
+                                        Kotlin for Android Developers
+                                        <br/>
+                                    </div>
+                                    <div class="item-dates">
+                                        <b>Dates:</b><br/>
+                                        <ul>
+                                            <li>May 2017</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>	
+		</div>
+			
+		<div id="scrollTop">
+			<span class="icon-arrow-up"></span>
+		</div>
+	</body>
+
+	<footer class="footer">
+		<div class="row">
+			<div class="col-6">
+				Designed and developed by Albert Miró		
+			</div>
+			<div class="col-6 social-media">
+                <a href="https://github.com/albertmiro" target="_blank">
+					<span class="icon-github-square"></span>
+				</a>
+				<a href="https://www.linkedin.com/in/albertmiro" target="_blank">
+					<span class="icon-linkedin-square"></span>
+				</a>
+				<a href="https://twitter.com/twAlbertM" target="_blank">
+					<span class="icon-twitter-square"></span>
+				</a>
+				<a href="https://plus.google.com/109437374526311160129" target="_blank">
+					<span class="icon-google-plus-square"></span>
+				</a>	
+				<a href="mailto:info@albertmiro.com" target="_blank">
+					<span class="icon-envelope"></span>
+				</a>
+				<a href="https://500px.com/albertmiro" target="_blank">
+					<span class="icon-camera-retro"></span>
+				</a>
+			</div>
+		</div>
+		
+		
+	</footer>
+</html>
